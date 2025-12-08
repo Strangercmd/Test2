@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    color: #4CAF50; /* Green color for the title */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+#banking-app {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#banking-app h2 {
+    color: #4CAF50; /* Green color for section titles */
+    margin-bottom: 10px;
+}
+
+#banking-app div {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#balance-display {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+#account-management-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#account-management-section input, 
+#account-management-section select, 
+#account-management-section button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#account-management-section h2 {
+    color: #4CAF50; /* Green color for section titles */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+}
