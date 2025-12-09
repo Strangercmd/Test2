@@ -1,1 +1,1 @@
-This is a banking system that I have made. Unfortunately, it runs on your local so, you can't close it and have it save your data on it. I am currently testing this to see if I can host it to be public.
+This is a banking system that I have made. I have made it so it stays on your localStorage which means you can close the tab and re-open it and it will remain, just that this is not publich which manes you cannot access the same data on another computer.
