@@ -1,4 +1,17 @@
-const accounts = {};
+let accounts = {};
+
+// Save accounts to localStorage
+function saveAccounts() {
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+}
+
+// Load accounts from localStorage on page load
+function loadAccounts() {
+    const savedAccounts = localStorage.getItem('accounts');
+    if (savedAccounts) {
+        accounts = JSON.parse(savedAccounts);
+    }
+}
 
 // Create Account
 document.getElementById('create-account').addEventListener('click', () => {
@@ -15,10 +28,12 @@ document.getElementById('create-account').addEventListener('click', () => {
     const accountSelect = document.getElementById('account-select');
     const option = document.createElement('option');
     option.value = accountName;
+    localStorage.setItem('accountName', accountName,);
     option.textContent = accountName;
     accountSelect.appendChild(option);
     alert(`Account "${accountName}" created successfully.`);
     document.getElementById('account-name').value = '';
+    saveAccounts();
     updateAccountDropdowns();
 });
 
@@ -37,6 +52,7 @@ document.getElementById('deposit').addEventListener('click', () => {
     accounts[accountName] += amount;
     alert(`Deposited ₹${amount} to "${accountName}".`);
     document.getElementById('amount').value = '';
+    saveAccounts();
 });
 
 // Withdraw Money
@@ -58,6 +74,7 @@ document.getElementById('withdraw').addEventListener('click', () => {
     accounts[accountName] -= amount;
     alert(`Withdrew ₹${amount} from "${accountName}".`);
     document.getElementById('amount').value = '';
+    saveAccounts();
 });
 
 // Check Balance
@@ -106,6 +123,7 @@ document.getElementById('change-account-name').addEventListener('click', () => {
     delete accounts[oldAccountName];
     alert(`Account name changed from "${oldAccountName}" to "${newAccountName}".`);
     document.getElementById('new-account-name').value = '';
+    saveAccounts();
     updateAccountDropdowns();
 });
 
@@ -121,8 +139,12 @@ document.getElementById('delete-account').addEventListener('click', () => {
     }
     delete accounts[accountName];
     alert(`Account "${accountName}" deleted successfully.`);
+    saveAccounts();
     updateAccountDropdowns();
 });
+
+// Load accounts on page load
+loadAccounts();
 
 // Update dropdowns on page load
 updateAccountDropdowns();
