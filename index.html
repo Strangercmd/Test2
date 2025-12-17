@@ -7,47 +7,50 @@
     <title id="title">Banking System</title>
 </head>
 <body>
-    <div id="navbar">
-        <a href="#account-section">Create Account</a>
-        <a href="#transaction-section">Transactions</a>
-        <a href="#balance-section">Check Balance</a>
-        <a href="#account-management-section">Manage Accounts</a>
-    </div>
-    <h1 id="title">Banking System</h1>
-
-    <div id="banking-app">
-        <div id="account-section">
-            <h2>Create Account</h2>
-            <input type="text" id="account-name" placeholder="Enter Account Name">
-            <button id="create-account">Create Account</button>
+    <nav id="navbar">
+        <ul>
+            <li><a href="create_acc.html">Create Account</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="check_balance.html">Check Balance</a></li>
+            <li><a href="manage_acc.html">Manage Accounts</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Simple, Private, Local Banking for Your Small Projects</h1>
+            <p class="lead">A lightweight personal banking demo that keeps your data in your browser. Fast, private, and easy to use — perfect for learning, prototyping, or managing simple personal ledgers.</p>
+            <p>
+                <a class="cta" href="create_acc.html">Get Started — Create an Account</a>
+            </p>
         </div>
+    </header>
 
-        <div id="transaction-section">
-            <h2>Transactions</h2>
-            <select id="account-select">
-                <option value="" disabled selected>Select Account</option>
-            </select>
-            <input type="number" id="amount" placeholder="Enter Amount">
-            <button id="deposit">Deposit</button>
-            <button id="withdraw">Withdraw</button>
-        </div>
+    <main id="banking-app">
+        <section class="features">
+            <div class="feature-card">
+                <h3>Local-first & Private</h3>
+                <p>All account data is stored in your browser's localStorage — nothing leaves your device unless you export it. Great for privacy and quick demos.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Instant Updates</h3>
+                <p>Create accounts, deposit, withdraw, and rename instantly. Changes are saved automatically so your data persists on refresh.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Minimal & Easy</h3>
+                <p>A small, focused interface so anyone can track balances without complexity. Ideal for students and small personal projects.</p>
+            </div>
+        </section>
 
-        <div id="balance-section">
-            <h2>Check Balance</h2>
-            <button id="check-balance">Check Balance</button>
-            <p id="balance-display"></p>
-        </div>
+        <section style="text-align:center; max-width:900px; margin: 0 auto 60px;">
+            <h2>Why this banking system?</h2>
+            <p>It’s designed to be simple, transparent, and portable. Since it uses localStorage, you can use it offline, keep your data private, and inspect or export your data anytime. It's not a production bank — it's a clean, educational tool you can run and modify in minutes.</p>
+            <p><a class="cta" href="transactions.html">Go to Transactions</a> &nbsp; <a class="cta" href="manage_acc.html">Manage Accounts</a></p>
+        </section>
+    </main>
 
-        <div id="account-management-section">
-            <h2>Manage Accounts</h2>
-            <select id="account-select-manage">
-                <option value="" disabled selected>Select Account</option>
-            </select>
-            <input type="text" id="new-account-name" placeholder="Enter New Account Name">
-            <button id="change-account-name">Change Account Name</button>
-            <button id="delete-account">Delete Account</button>
-        </div>
-    </div>
+    <footer>
+        Built with care — your data stays on your device. For demos and personal use only.
+    </footer>
 
     <script src="script.js"></script>
 </body>

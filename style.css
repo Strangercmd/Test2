@@ -84,6 +84,38 @@ button:hover {
     color: #4CAF50; /* Green color for section titles */
 }
 
+/* Navbar / list styles (scoped to #navbar) */
+#navbar {
+        width: 200px;
+        float: left;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+#navbar li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+#navbar li a:hover {
+    background-color: #555555;
+    color: white;
+}
+
+/* Make room for the left sidebar navbar */
+#banking-app {
+        margin-left: 220px;
+}
+
 footer {
     text-align: center;
     margin-top: 20px;
@@ -91,4 +123,72 @@ footer {
     background-color: #4CAF50;
     color: white;
     font-size: 14px;
+}
+
+/* Landing / hero styles */
+.hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #e8f5ef 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+.hero .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+    color: #214b3b;
+}
+.hero p.lead {
+    font-size: 18px;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+}
+.cta {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(76,175,80,0.18);
+}
+.features {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin: 40px 0 60px 0;
+    flex-wrap: wrap;
+}
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    width: 260px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    text-align: left;
+}
+.feature-card h3 {
+    margin: 0 0 8px 0;
+    color: #214b3b;
+}
+.feature-card p {
+    margin: 0;
+    color: #3b4f4f;
+}
+
+/* Small utility tweaks for landing page */
+#banking-app {
+    width: auto;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 24px;
+}
+
+@media (max-width: 720px) {
+    .features { flex-direction: column; align-items: center; }
+    #navbar { width: 100%; float: none; }
+    #banking-app { margin-left: 0; }
 }
